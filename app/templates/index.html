@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I Love Docker</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            background-color: #f0f0f0;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .floating-text {
+            font-size: 3rem;
+            font-family: Arial, sans-serif;
+            font-weight: bold;
+            position: absolute;
+            animation: floatAnimation 5s infinite;
+            pointer-events: none;
+        }
+
+        @keyframes floatAnimation {
+            0% {
+                transform: translateX(0) translateY(0);
+                color: #FF5733; /* Red */
+            }
+            25% {
+                transform: translateX(200px) translateY(-200px);
+                color: #33FF57; /* Green */
+            }
+            50% {
+                transform: translateX(-200px) translateY(200px);
+                color: #3357FF; /* Blue */
+            }
+            75% {
+                transform: translateX(150px) translateY(100px);
+                color: #FF33A6; /* Pink */
+            }
+            100% {
+                transform: translateX(0) translateY(0);
+                color: #FF5733; /* Red */
+            }
+        }
+
+        .floating-text:nth-child(2) {
+            animation-delay: 1s;
+        }
+
+        .floating-text:nth-child(3) {
+            animation-delay: 2s;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="floating-text">I love Jenkins</div>
+    <div class="floating-text">I hate Jenkins</div>
+    <div class="floating-text">I hate Jenkins</div>
+</body>
+</html>
+
